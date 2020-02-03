@@ -1,13 +1,14 @@
-class Source:
+class Sources:
     '''
     source class to define source objects
     '''
-    def __init__(self, Source_id, name,  title):
+    def __init__(self, Source_id, name,  title, description):
         self.id = Source_id
         self.name = name 
         self.title = title
+        self.description = description
 
-class Article:
+class Articles:
     '''
     article class to define article objects
     '''
