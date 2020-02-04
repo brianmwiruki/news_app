@@ -1,0 +1,88 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> {% if title %}
+    <title> {{ title }} </title>
+    {% else %}
+    <title> MPasho News </title>
+    {% endif %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+
+    <!-- Content block  -->
+    {% block content %}
+    <div class="container" style="background-color: #5368729b;border-radius: 0.1rem;">
+        <h1 style="font-family: 'Ma Shan Zheng', cursive;">MPasho <span style="color: saddlebrown;"><span style="font-size: 70px;line-height: 150px;font-style: italic;" >H</span>igh</span>Lights</h1>
+
+        <h2 class="text-center">Welcome to All News Source Platform</h2>
+        <div class="container text-center hoverable p-4 img-fluid">
+            <h3>TOP STORIES</h3>
+
+            {% for top_article in google_news %}
+            <div class="col-md-4" style="padding: 1%;">
+                <div class="">
+                    <div class="topnews" style="border:1px solid saddlebrown;padding: 1%;border-radius: 0.2rem;">
+                        <img src={{top_article.urlToImage}} style="width:260px;height:160px">
+                        <p>{{top_article.title | truncate(50)}}</p>
+                        <a href={{top_article.url}} style="color: saddlebrown;">Explore Article</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="container hoverable p-4 text-center">
+            <h3>CATEGORIES</h3>
+
+            <!-- <center> -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#biz" style="color: rgba(109, 49, 9, 0.828);">Business</a></li>
+                <li><a data-toggle="tab" href="#tech" style="color: rgba(109, 49, 9, 0.828);">Technology</a></li>
+                <li><a data-toggle="tab" href="#ent" style="color: rgba(109, 49, 9, 0.828);">Entertainment</a></li>
+                <li><a data-toggle="tab" href="#sprt" style="color: rgba(109, 49, 9, 0.828);">Sports</a></li>
+            </ul>
+            <!-- </center> -->
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="biz">
+                    <ul>
+                        {{ macro.displayCategories(biz)}}
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="tech">
+                    <ul>
+                        {{ macro.displayCategories(tech)}}
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="ent">
+                    <ul>
+                        {{ macro.displayCategories(ent)}}
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="sprt">
+                    <ul>
+                        {{ macro.displayCategories(sprt)}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock%}
+
+</body>
+
+</html>

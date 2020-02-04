@@ -1,0 +1,12 @@
+{% macro displayCategories(categories_list)%} {% for categories in categories_list %}
+<div class="col-md-3">
+    <div class="thumbnail">
+        <div class="updates">
+
+            <p style="font-weight:bold">{{categories.name}}</p>
+            <p>{{categories.description | truncate(50)}}</p>
+            <a href="/update/{{categories.id}}"> View News </a>
+        </div>
+    </div>
+</div>
+{% endfor %} {%endmacro%}
