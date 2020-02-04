@@ -20,6 +20,7 @@ def get_sources():
 return data
 
 def process_resource(data)
+
     all_resources = []
 
     for res in data['sources']:
@@ -27,4 +28,13 @@ def process_resource(data)
         all_resources.append(new_source)
     return all_resources
 
-def get_articles()
+def get_articles(articles):
+
+    get_articles_url = BASE_URL.format(articles,API_KEY)
+
+    with urllib.request.urlopen(get_articles_url) as url:
+        
+
+    
+
+
