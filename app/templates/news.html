@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+<!DOCTYPE html>
+<html>
+
+
+
+{% block content %} {% for detz_article in detz %}
+<div class="container" style="background-color:  #5368729b;padding:1%;border-radius:0.1rem;">
+    <div id="artic" class="container text-center">
+
+        <div class="row tab-content" style="border: 1px solid saddlebrown;border-radius: 0.1rem; padding: 1%;margin-bottom: 2%;width: 100%;">
+
+            <div class="col-md-5">
+
+                <img src="{{detz_article.urlToImage}}" style="width: 340px; ">
+                <p style="font-size: 12px;"><strong>{{detz_article.title}}</strong></p>
+
+
+            </div>
+
+            <div class="col-md-5">
+
+
+                <p>{{detz_article.description}}</p>
+                <p><a href="{{detz_article.url}}">Read More</a></p>
+                <p><strong>Published on {{detz_article.publishedAt}}</strong></p>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %} {% endblock%}
+
+</div>
+
+</html>
