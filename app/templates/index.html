@@ -24,8 +24,8 @@
 
     <!-- Content block  -->
     {% block content %}
-    <div class="container-fluid" style="background-color: #24557ce0;border-radius: 0.1rem;">
-        <h1 style="font-family: 'Ma Shan Zheng', cursive;"><span style="font-size: 70px;line-height: 150px;font-style: italic;">4</span>Real <span style="color: saddlebrown;"><span style="font-size: 70px;line-height: 150px;font-style: italic;" >H</span>igh</span>Lights</h1>
+    <div class="container-fluid" style="background-color: #2295f3;border-radius: 0.1rem;">
+        <h1 style="font-family: 'Ma Shan Zheng', cursive;"><span style="font-size: 70px;line-height: 150px;font-style: italic;">4</span>Real <span><span style="font-size: 70px;line-height: 150px;font-style: italic;" >H</span>igh</span>Lights</h1>
 
         <h2 class="text-center">Welcome to 4Real News Platform</h2>
         <div class="container text-center hoverable p-4 img-fluid">
@@ -34,10 +34,10 @@
             {% for top_article in google_news %}
             <div class="col-md-4" style="padding: 1%;">
                 <div class="">
-                    <div class="topnews" style="border:1px solid rgb(19, 139, 45);padding: 1%;border-radius: 0.2rem;">
+                    <div class="topnews" style="border:1px solid #000; padding: 1%;border-radius: 0.2rem;">
                         <img src={{top_article.urlToImage}} style="width:260px;height:160px">
                         <p>{{top_article.title | truncate(50)}}</p>
-                        <a href={{top_article.url}} style="color: rgb(19, 139, 45);">Explore Article</a>
+                        <a href={{top_article.url}} style="color: #000;">Explore Article</a>
                     </div>
                 </div>
             </div>
