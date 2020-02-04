@@ -1,19 +1,34 @@
-class Sources:
-    '''
-    source class to define source objects
-    '''
-    def __init__(self, Source_id, name,  title, description):
-        self.id = Source_id
-        self.name = name 
+class Categories:
+    """
+    Categories class to define categories objects
+    """
+    def __init__(self,id,name,description,url):
+        self.id = id
+        self.name = name
+        self.description = description
+        self.url = url
+
+class TopNews:
+    """
+    Topnews class to define topnews objects
+    """
+    def __init__(self,name,author,title,description,urlToImage,url):
+        self.name = name
+        self.author = author
         self.title = title
         self.description = description
+        self.urlToImage = urlToImage
+        self.url = url
 
-class Articles:
-    '''
-    article class to define article objects
-    '''
-    def __init__(self, author, title, image_url, published_at)
-        self.author = author 
+class NewsUpdate:
+    """
+    NewsUpdate class to define categories objects
+    """
+    def __init__(self, id, author, title, description, url, urlToImage, publishedAt):
+        self.id = id
+        self.author = author
         self.title = title
-        self.image_url = image_url
-        self.published_at = published_at
+        self.description = description
+        self.url = url  
+        self.urlToImage = urlToImage
+        self.publishedAt = publishedAt
