@@ -15,12 +15,12 @@ def index():
      tech_articles = get_categories('technology')
      ent_articles = get_categories('entertainment')
      sprt_articles = get_categories('sports')
-     title = 'MPasho News'
+     title = '4REAL NEWS'
      return render_template('index.html', title = title, google_news = top_articles, biz = biz_articles, tech = tech_articles, ent = ent_articles, sprt = sprt_articles)
 
 
 @main.route('/update/<id>')
 def article(id):
     detz_articles = get_newsupdates(id)
-    print(detz_articles)
+#     print(detz_articles)
     return render_template('news.html',detz = detz_articles)
