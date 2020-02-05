@@ -1,5 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Bryan4real/news_app/blob/master/LICENSE)
 
+[![codebeat badge](https://codebeat.co/badges/93f38ecd-439e-4755-a5ba-87b825b9aba4)](https://codebeat.co/projects/github-com-bryan4real-news_app-master)
+
 # 4RealNewsApp
 
 This is a python based application that makes news highlights available to the user with relevance to time and place. The user can also select different categories of news depending on the user's desire.
